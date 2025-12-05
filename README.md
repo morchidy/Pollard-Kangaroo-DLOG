@@ -5,23 +5,27 @@
 Implementation of Pollard's Kangaroo algorithm for memoryless discrete logarithm computation in bounded intervals. The algorithm solves the discrete logarithm problem for elements in a cyclic subgroup $\mathbb{G} < \mathbb{F}^{\times}_{2^{115}-85}$ where the exponent is known to lie in the interval $[0, 2^{64}-1]$.
 
 ## Project Architecture
->src/
-├── README.md # This file
-├── kangaroos.c # Main implementation of Pollard's Kangaroo algorithm
-├── mul11585.h # Header file for multiplication in GF(2^115-85)
-├── param_test.sh # Bash script for running parameter tests
-├── parameter_tester.py # Python script for automated parameter testing
-└── parameter_tests/ # Directory for parameter testing
->>├── test_baseline.c # Baseline configuration test
-├── test_k_small.c # Test with k=16
-├── test_k_large.c # Test with k=64
-├── test_mu_small.c # Test with μ=2^30
-├── test_mu_large.c # Test with μ=2^32
-├── test_d_frequent.c # Test with 24-bit distinguished points
-├── test_d_infrequent.c # Test with 28-bit distinguished points
-├── test_start_early.c # Test with early starting point (W/4)
-├── test_start_late.c # Test with late starting point (3W/4)
-└── mul11585.h # Copy of multiplication header
+```
+.
+├── README.md                    # This file
+├── kangaroos.c                  # Main implementation of Pollard's Kangaroo algorithm
+├── mul11585.h                   # Header file for multiplication in GF(2^115-85)
+├── param_test.sh                # Bash script for running parameter tests
+├── parameter_tester.py          # Python script for automated parameter testing
+├── docs/
+│   └── Report.pdf               # Project documentation
+└── parameter_tests/             # Directory for parameter testing
+    ├── test_baseline.c          # Baseline configuration test
+    ├── test_k_small.c           # Test with k=16
+    ├── test_k_large.c           # Test with k=64
+    ├── test_mu_small.c          # Test with μ=2^30
+    ├── test_mu_large.c          # Test with μ=2^32
+    ├── test_d_frequent.c        # Test with 24-bit distinguished points
+    ├── test_d_infrequent.c      # Test with 28-bit distinguished points
+    ├── test_start_early.c       # Test with early starting point (W/4)
+    ├── test_start_late.c        # Test with late starting point (3W/4)
+    └── mul11585.h               # Copy of multiplication header
+```
 
 
 
